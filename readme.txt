@@ -12,6 +12,10 @@
 \!w c1smys
 mysql -u root -p --databases <table_name_in_plural > <date_dbname.sql>
 
-mysqldump -u root -p --databases library_db >C:\Users\User\Documents\IT30B\IT30B\Backups\0818206_library
 
-mysqldump -u root -p --databases library_db > "C:\xampp\htdocs\IT30B\Backups\%date:~-4%%date:~3,2%%date:~0,2%_%time:~0,2%%time:~3,2%%time:~6,2%_library_db.sql"
+
+
+
+
+mysqldump -u root -p --databases library_db > "C:\xampp\htdocs\IT30B\backups\%date:~-4%%date:~3,2%%date:~0,2%_%time:~0,2%%time:~3,2%%time:~6,2%_library_db.sql"
+
