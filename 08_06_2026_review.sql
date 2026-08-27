@@ -8,9 +8,6 @@ create table students(
 );
 
 
-
-
-
  create table book (
     book_Id int autoincrement primary key,
     book_Name varchar(50) not null,

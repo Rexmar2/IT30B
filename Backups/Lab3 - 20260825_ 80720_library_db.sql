@@ -24,6 +24,33 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `library_db` /*!40100 DEFAULT CHARACTER
 USE `library_db`;
 
 --
+-- Table structure for table `books`
+--
+
+DROP TABLE IF EXISTS `books`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `books` (
+  `book_id` int(11) NOT NULL AUTO_INCREMENT,
+  `book_title` varchar(100) NOT NULL,
+  `book_author` varchar(100) NOT NULL,
+  `book_category` varchar(50) NOT NULL,
+  `book_created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`book_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `books`
+--
+
+LOCK TABLES `books` WRITE;
+/*!40000 ALTER TABLE `books` DISABLE KEYS */;
+INSERT INTO `books` VALUES (1,'The Hobbit','J. R. R. Tolkien','Fantasy','2026-08-24 23:59:37'),(2,'The Hunger Games','Suzanne Collins','Science Fiction','2026-08-24 23:59:37'),(3,'The Alchemist','Paulo Coelho','Fiction','2026-08-24 23:59:37');
+/*!40000 ALTER TABLE `books` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `students`
 --
 
@@ -35,8 +62,9 @@ CREATE TABLE `students` (
   `student_first_name` varchar(50) NOT NULL,
   `student_last_name` varchar(50) NOT NULL,
   `student_course` varchar(50) NOT NULL,
+  `student_created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`student_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,7 +73,7 @@ CREATE TABLE `students` (
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` VALUES (1,'REXMAR','BOLINQUIT','BSIT');
+INSERT INTO `students` VALUES (1,'REXMAR','BOLINQUIT','BSIT','2026-08-22 13:38:56'),(2,'Rekku','lapuz','BSIT','2026-08-22 13:44:10'),(3,'Hazeru','Lincuna','BSIT','2026-08-22 13:55:19'),(4,'Indot','Dalisay','BSIT','2026-08-23 14:59:04');
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,8 +86,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-<<<<<<< HEAD
--- Dump completed on 2026-08-20  8:41:20
-=======
--- Dump completed on 2026-08-21 21:06:58
->>>>>>> 7b495d2 (additional for lab3)
+-- Dump completed on 2026-08-25  8:07:21
