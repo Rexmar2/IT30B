@@ -5,7 +5,7 @@ SELECT
     b.book_title,
     b.book_author,
     b.book_category,
-    br.borrow_date
+    br.borrow_date 
 FROM borrow br
 INNER JOIN students s
     ON br.student_id = s.student_id
@@ -17,4 +17,4 @@ ORDER BY br.borrow_date DESC;
 UPDATE borrow 
 SET borrow_return_date = CURRENT_TIMESTAMP
 WHERE borrow_id = 4
-  AND borrow_return_date IS NULL; sdsds
+  AND borrow_return_date IS NULL; 
