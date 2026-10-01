@@ -241,7 +241,7 @@ IF($section=='borrow'){
         FROM books
         ORDER BY book_title
         ");
-      $students = $stmt->fetchAll();
+      $books = $stmt->fetchAll();
 }
 
 
